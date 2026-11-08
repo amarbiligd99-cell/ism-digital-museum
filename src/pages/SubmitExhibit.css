@@ -1,0 +1,193 @@
+.submit-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(24, 17, 48, 0.68);
+  backdrop-filter: blur(5px);
+  overflow-y: auto;
+}
+
+.submit-modal {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 42px;
+  background: #fff;
+  box-shadow: 0 25px 80px #120b3030;
+}
+
+.submit-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  border: 0;
+  background: transparent;
+  color: #777;
+}
+
+.submit-heading {
+  margin-bottom: 28px;
+}
+
+.submit-eyebrow {
+  color: #7259d5;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.submit-heading h2 {
+  margin: 13px 0 8px;
+  color: #211b35;
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+}
+
+.submit-heading p {
+  color: #898397;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.submit-field {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.submit-field > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #302943;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.submit-field input,
+.submit-field textarea,
+.submit-field select {
+  width: 100%;
+  border: 1px solid #e8e5ef;
+  outline: none;
+  padding: 13px 14px;
+  background: #fff;
+  color: #302943;
+  font: inherit;
+  font-size: 12px;
+}
+
+.submit-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-field input:focus,
+.submit-field textarea:focus,
+.submit-field select:focus {
+  border-color: #7259d5;
+}
+
+.submit-upload {
+  min-height: 150px;
+  border: 1px dashed #c9c1e6;
+  background: #faf9fd;
+  color: #7259d5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+}
+
+.submit-upload input {
+  display: none;
+}
+
+.submit-upload strong {
+  font-size: 12px;
+}
+
+.submit-upload small {
+  color: #9992a7;
+  font-size: 10px;
+}
+
+.submit-upload img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  background: #f5f3fa;
+}
+
+.submit-remove-image {
+  margin-top: 8px;
+  border: 0;
+  background: transparent;
+  color: #7259d5;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.submit-button {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 8px;
+  padding: 13px 18px;
+  border: 0;
+  background: #3920b7;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.submit-message {
+  padding: 11px 13px;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.submit-error {
+  background: #fff0f1;
+  color: #bd3445;
+}
+
+.submit-success {
+  background: #eefaf2;
+  color: #218653;
+}
+
+.submit-spinner {
+  animation: submit-spin 1s linear infinite;
+}
+
+@keyframes submit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .submit-modal {
+    padding: 32px 22px;
+  }
+
+  .submit-heading h2 {
+    font-size: 28px;
+  }
+}

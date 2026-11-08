@@ -1,0 +1,361 @@
+.student-page {
+  min-height: 100vh;
+  background: #f7f6fa;
+  color: #211b35;
+}
+
+.student-header {
+  min-height: 78px;
+  padding: 15px 7%;
+  background: white;
+  border-bottom: 1px solid #eeeaf5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.student-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #80788f;
+  font-size: 12px;
+}
+
+.student-content {
+  max-width: 1150px;
+  margin: auto;
+  padding: 55px 35px 80px;
+}
+
+.student-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.student-title-row h1 {
+  margin: 12px 0;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+}
+
+.student-title-row p,
+.student-edit-panel > p {
+  color: #898397;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.student-section {
+  margin-top: 42px;
+}
+
+.student-section h2,
+.student-edit-panel h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.student-exhibit-info {
+  padding: 5px;
+  min-width: 0;
+}
+
+.student-exhibit-info h3 {
+  margin: 13px 0 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 23px;
+}
+
+.student-exhibit-info > p {
+  color: #817a90;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.student-edit-button {
+  margin-top: 20px;
+}
+
+.student-pending-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a36b0a !important;
+  margin-top: 18px;
+}
+
+.student-edit-panel {
+  padding: 28px;
+  margin: 25px 0;
+  background: white;
+  border: 1px solid #ece8f3;
+}
+
+.student-edit-panel form {
+  margin-top: 22px;
+  display: grid;
+  gap: 15px;
+}
+
+.student-edit-panel label {
+  display: grid;
+  gap: 8px;
+  color: #514d63;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.student-edit-panel input,
+.student-edit-panel textarea,
+.student-edit-panel select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dedbea;
+  border-radius: 8px;
+  background: white;
+  color: #292638;
+  font: inherit;
+  font-size: 13px;
+}
+
+.student-edit-panel input:focus,
+.student-edit-panel textarea:focus,
+.student-edit-panel select:focus {
+  outline: none;
+  border-color: #6956c9;
+}
+
+.student-edit-panel textarea {
+  resize: vertical;
+}
+
+.student-form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.student-request-list {
+  display: grid;
+  gap: 12px;
+}
+
+.student-request-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ece8f3;
+}
+
+.student-request-card strong {
+  font-size: 14px;
+}
+
+.student-request-card p {
+  margin-top: 8px;
+  color: #898397;
+  font-size: 11px;
+}
+
+.student-request-card .admin-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  .student-content {
+    padding: 30px 18px 60px;
+  }
+
+  .student-header {
+    padding: 14px 18px;
+  }
+
+  .student-header-right {
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .student-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .student-title-row h1 {
+    font-size: 30px;
+  }
+
+  .student-request-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* STUDENT DASHBOARD BUTTON DESIGN */
+
+.student-page button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.student-page button.admin-approve {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 22px;
+  min-height: 44px;
+  border: 1px solid #6956c9;
+  border-radius: 7px;
+  background: #6956c9;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(105, 86, 201, 0.13);
+}
+
+.student-page button.admin-approve:hover {
+  background: #5844b5;
+  border-color: #5844b5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 13px rgba(105, 86, 201, 0.2);
+}
+
+.student-page button.admin-approve:active {
+  transform: translateY(0);
+}
+
+.student-page button.admin-reject {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  min-height: 44px;
+  border: 1px solid #e5e0ef;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #777087;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.student-page button.admin-reject:hover {
+  background: #fff1f1;
+  border-color: #e7bcbc;
+  color: #c65353;
+}
+
+.student-page .student-edit-button {
+  margin-top: 20px;
+}
+
+.student-page button.admin-refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 20px;
+  min-height: 44px;
+  border: 1px solid #ded7f2;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #6956c9;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.student-page button.admin-refresh:hover {
+  background: #f0edfc;
+  border-color: #6956c9;
+}
+
+.student-page button.admin-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid #e5e0ef;
+  border-radius: 7px;
+  background: white;
+  color: #6956c9;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.student-page button.admin-back:hover {
+  background: #f2efff;
+}
+
+.student-page .student-form-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.student-page .student-pending-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 13px;
+  width: fit-content;
+  border-radius: 6px;
+  background: #fff8e9;
+  color: #a36b0a !important;
+  font-size: 12px;
+}
+
+.student-page button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.student-delete-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 0 12px;
+  padding: 11px 15px;
+  border-radius: 6px;
+}
+
+@media (max-width: 650px) {
+  .student-page .student-form-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .student-page .student-form-actions button {
+    width: 100%;
+  }
+
+  .student-page button.admin-refresh {
+    width: 100%;
+  }
+
+  .student-page button.admin-back {
+    font-size: 11px;
+    padding: 9px 12px;
+  }
+
+  .student-delete-button {
+    margin-left: 0;
+  }
+}
